@@ -1,8 +1,10 @@
 package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 
+import com.am.androidlibrary.JokeActivity;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
@@ -45,5 +47,12 @@ public class GetJokeFromServerAsyncTask extends AsyncTask<Void, Void, String> {
         } catch (IOException e) {
             return e.getMessage();
         }
+    }
+
+    @Override
+    protected void onPostExecute(String output) {
+        Intent jokeIntent = new Intent(mContext, JokeActivity.class);
+        jokeIntent.putExtra(JokeActivity.EXTRA_JOKE, output);
+        mContext.startActivity(jokeIntent);
     }
 }
