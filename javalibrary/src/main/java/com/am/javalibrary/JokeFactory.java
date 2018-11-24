@@ -1,11 +1,10 @@
 package com.am.javalibrary;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class JokeFactory {
-    private List<String> jokeList;
+    private ArrayList<String> jokeList;
     private Random random;
 
 
@@ -20,7 +19,7 @@ public class JokeFactory {
         jokeList.add("Do I lose when the police officer says papers and I say scissors?");
     }
 
-    public List<String> getJokeList() {
+    public ArrayList<String> getJokeList() {
         return jokeList;
     }
 
