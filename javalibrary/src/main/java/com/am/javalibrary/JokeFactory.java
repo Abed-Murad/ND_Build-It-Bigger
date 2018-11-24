@@ -24,6 +24,6 @@ public class JokeFactory {
     }
 
     public String getRandomJoke() {
-        return jokeList.get(random.nextInt(jokeList.size() - 1));
+        return jokeList.get(random.nextInt(jokeList.size()));
     }
 }

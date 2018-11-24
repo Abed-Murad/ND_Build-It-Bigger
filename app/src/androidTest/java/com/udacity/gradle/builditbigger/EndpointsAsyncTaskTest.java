@@ -35,6 +35,9 @@ public class EndpointsAsyncTaskTest {
         Assert.assertTrue("Unexpected value for d.getFormType(): " + jokeFromLib,
                 jokeFromLib.equals(jokeList.get(0)) ||
                         jokeFromLib.equals(jokeList.get(1)) ||
-                        jokeFromLib.equals(jokeList.get(2)));
+                        jokeFromLib.equals(jokeList.get(2))||
+                        jokeFromLib.equals(jokeList.get(3))||
+                        jokeFromLib.equals(jokeList.get(4))||
+                        jokeFromLib.equals(jokeList.get(5)));
     }
 }
